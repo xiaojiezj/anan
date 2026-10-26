@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dist-pages/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+output/
+.tools/
+android/.gradle/
+android/local.properties
+android/**/build/
+*.jks
+*.keystore
+playwright-report/
+test-results/
+.DS_Store

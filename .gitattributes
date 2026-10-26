@@ -1,0 +1,4 @@
+# Offline model checksums must remain identical on every platform.
+android/app/src/main/assets/speech/** -text -diff
+android/app/libs/*.aar binary
+android/app/src/androidTest/assets/**/*.pcm binary
