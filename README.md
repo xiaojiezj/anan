@@ -4,9 +4,7 @@
 
 ## GitHub Pages
 
-仓库：[xiaojiezj/anan](https://github.com/xiaojiezj/anan)。默认地址：[小小探索家](https://xiaojiezj.github.io/anan/)。自定义域名：`mingan.bbroot.com`。
-
-自定义域名需要在 `mingan.bbroot.com` 的域名管理控制台添加 `CNAME` 记录：主机名 `@`，目标 `xiaojiezj.github.io`，TTL 使用默认值。如果管理的是父域 `bbroot.com`，主机名才填 `mingan`。目标不包含 `https://` 或 `/anan/`。DNS 生效后，在仓库 **Settings → Pages → Custom domain** 绑定 `mingan.bbroot.com`；等待 GitHub 签发证书后开启 **Enforce HTTPS**。完成后通过 `https://mingan.bbroot.com/` 访问，默认地址会跳转到新域名。
+仓库：[xiaojiezj/anan](https://github.com/xiaojiezj/anan)。网站地址：[小小探索家](https://xiaojiezj.github.io/anan/)。使用 GitHub Pages 默认域名与 HTTPS，无需配置域名或 DNS 解析。
 
 推送到 `main` 后，GitHub Actions 自动安装依赖、运行测试、构建并发布网站。首次发布需在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。GitHub Free 的 Pages 需要公开仓库；私有仓库需支持 Pages 的付费方案。网站发布后可公开访问。
 
@@ -17,7 +15,7 @@ npm run build:pages
 npm exec vite -- preview --outDir dist-pages --port 5181
 ```
 
-本地验证地址为 `http://localhost:5181/`。Pages 构建单独输出到 `dist-pages/`，使用相对资源路径，同时兼容默认地址的 `/anan/` 与自定义域名的根目录；Android 继续使用 `npm run build` 生成的 `dist/`，两者互不覆盖。工作流只上传网页文件，不发布 APK、原生语音模型或签名文件。
+本地验证地址为 `http://localhost:5181/`。Pages 构建单独输出到 `dist-pages/`，使用相对资源路径，支持默认网站地址的 `/anan/` 路径；Android 继续使用 `npm run build` 生成的 `dist/`，两者互不覆盖。工作流只上传网页文件，不发布 APK、原生语音模型或签名文件。
 
 商品照片、字库与学习记录保存在当前浏览器的 IndexedDB 中，不上传到 GitHub，也不会在用户之间共享。从本地预览、Android 或旧域名迁移，请先在旧页面“家长 → 导出备份”保存 JSON，再到新网站“家长 → 导入备份”。不同域名的数据不自动共享；清除站点数据会删除本机记录。
 
