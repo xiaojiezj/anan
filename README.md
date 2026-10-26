@@ -6,7 +6,7 @@
 
 仓库：[xiaojiezj/anan](https://github.com/xiaojiezj/anan)。默认地址：[小小探索家](https://xiaojiezj.github.io/anan/)。自定义域名：`mingan.bbroot.com`。
 
-自定义域名需要在 `bbroot.com` 的 DNS 管理中添加 `CNAME` 记录：主机名 `mingan`，目标 `xiaojiezj.github.io`，TTL 使用默认值。目标不包含 `https://` 或 `/anan/`。DNS 生效后，在仓库 **Settings → Pages → Custom domain** 绑定 `mingan.bbroot.com`；等待 GitHub 签发证书后开启 **Enforce HTTPS**。完成后通过 `https://mingan.bbroot.com/` 访问，默认地址会跳转到新域名。
+自定义域名需要在 `mingan.bbroot.com` 的域名管理控制台添加 `CNAME` 记录：主机名 `@`，目标 `xiaojiezj.github.io`，TTL 使用默认值。如果管理的是父域 `bbroot.com`，主机名才填 `mingan`。目标不包含 `https://` 或 `/anan/`。DNS 生效后，在仓库 **Settings → Pages → Custom domain** 绑定 `mingan.bbroot.com`；等待 GitHub 签发证书后开启 **Enforce HTTPS**。完成后通过 `https://mingan.bbroot.com/` 访问，默认地址会跳转到新域名。
 
 推送到 `main` 后，GitHub Actions 自动安装依赖、运行测试、构建并发布网站。首次发布需在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。GitHub Free 的 Pages 需要公开仓库；私有仓库需支持 Pages 的付费方案。网站发布后可公开访问。
 
